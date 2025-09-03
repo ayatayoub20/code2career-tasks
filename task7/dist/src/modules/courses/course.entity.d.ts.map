@@ -1,0 +1,1 @@
+{"version":3,"file":"course.entity.d.ts","sourceRoot":"","sources":["../../../../src/modules/courses/course.entity.ts"],"names":[],"mappings":"AAAA,OAAO,KAAI,EAAE,UAAU,EAAE,MAAM,yBAAyB,CAAC;AAEzD,MAAM,WAAW,MAAO,SAAQ,UAAU;IACxC,KAAK,EAAE,MAAM,CAAC;IACd,WAAW,EAAE,MAAM,CAAC;IACpB,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,SAAS,EAAE,MAAM,CAAC;CACnB"}
