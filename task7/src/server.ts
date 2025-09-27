@@ -2,7 +2,7 @@ import express from "express";
 import "dotenv/config";
 
 import  {userRouter} from "./modules/user/user.route";
-import  courseRouter  from "./modules/courses/course.route";
+import  {courseRouter}  from "./modules/courses/course.route";
 import   userService  from "./modules/user/user.service";
 
 import { errorHandler, notFound } from "./shared/error.middleware";

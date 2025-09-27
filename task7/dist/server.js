@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 require("dotenv/config");
 const user_route_1 = require("./modules/user/user.route");
-const course_route_1 = __importDefault(require("./modules/courses/course.route"));
+const course_route_1 = require("./modules/courses/course.route");
 const user_service_1 = __importDefault(require("./modules/user/user.service"));
 const error_middleware_1 = require("./shared/error.middleware");
 const auth_route_1 = require("./modules/auth/auth.route");
@@ -26,7 +26,7 @@ app.use(express_1.default.json());
     }
 })();
 app.use("/users", user_route_1.userRouter);
-app.use("/courses", course_route_1.default);
+app.use("/courses", course_route_1.courseRouter);
 app.use("/auth", auth_route_1.authRouter);
 app.use(error_middleware_1.notFound);
 app.use(error_middleware_1.errorHandler);

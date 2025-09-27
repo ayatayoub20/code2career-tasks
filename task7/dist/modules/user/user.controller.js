@@ -46,6 +46,32 @@ class UserController {
             next(e);
         }
     }
+    // GET /users/me  (My Profile)
+    getMe = (req, res, next) => {
+        try {
+            const me = user_service_1.default.getById(req.user.id);
+            if (!me)
+                return res.status(404).json({ message: "User not found" });
+            const { password, ...safe } = me;
+            res.json(safe);
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    // PUT /users/me
+    updateMe = (req, res, next) => {
+        try {
+            const updated = user_service_1.default.updateById(req.user.id, req.body);
+            if (!updated)
+                return res.status(404).json({ message: "User not found" });
+            const { password, ...safe } = updated;
+            res.json(safe);
+        }
+        catch (e) {
+            next(e);
+        }
+    };
     // POST /users/coach  (COACH)
     async createCoach(req, res, next) {
         try {

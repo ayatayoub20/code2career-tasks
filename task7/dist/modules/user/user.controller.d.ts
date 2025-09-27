@@ -9,6 +9,8 @@ declare class UserController {
         email: string;
         password: string;
     }>, res: Response, next: NextFunction): Promise<Response<any, Record<string, any>> | undefined>;
+    getMe: (req: Request, res: Response, next: NextFunction) => Response<any, Record<string, any>> | undefined;
+    updateMe: (req: Request, res: Response, next: NextFunction) => Response<any, Record<string, any>> | undefined;
     createCoach(req: Request<{}, {}, {
         name: string;
         email: string;
